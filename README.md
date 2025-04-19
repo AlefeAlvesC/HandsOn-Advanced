@@ -6,8 +6,14 @@ automatizado de entrega de medicamentos. A proposta consiste no desenvolvimento 
 segura, eficiente e autônoma, utilizando tecnologias conectadas em rede.
 
 ## Tecnologias Utilizadas
+- Placa Vespa para controlar motores do robo.
+- Firebase para armazenamento e gerenciamento de dados em tempo real.
+- HTML, CSS e JavaScript para desenvolvimento de interface. 
 
 ## Funcionalidades Principais
+- Envio e sincronização de dados em tempo real com Firebase.
+- Cadastro prévio das rotas de entrega de medicamentos.
+  
 
 ## Repositório
 O intuito deste repositório é deixar registrado o andamento do projeto, documentando cada atualização e melhoria ocorrida conforme o desenvolvimento do projeto afim de atender 
