@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2AIR - Nova Entrega</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Firebase App (necessário para todos os serviços Firebase) -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <!-- Firebase Database -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database-compat.js"></script>
+    
+</head>
+<body>
+  
+    <header class="header">
+        <img id="home-icon" src="static/home-icon.svg" alt="Home" class="icon">
+        <h1>2AIR</h1>
+        <img id="undo-icon" src="static/undo-icon.svg" alt="Voltar" class="icon">
+    </header>
+
+    <div class="subheader">ENTREGA DE MEDICAMENTOS</div>
+
+    <main class="form-container">
+        <label for="sala">INFORME A SALA DO PACIENTE:</label>
+        <input type="text" id="sala" placeholder="Ex: Sala 1">
+
+        <label for="nome">INFORME O NOME DO PACIENTE:</label>
+        <input type="text" id="nome" placeholder="Ex: João">
+
+        <label for="medicamento">INFORME O MEDICAMENTO PARA USO:</label>
+        <input type="text" id="medicamento" placeholder="Ex: Paracetamol">
+
+        <label for="medico">NOME DO MÉDICO RESPONSÁVEL:</label>
+        <input type="text" id="medico" placeholder="Ex: Dr. Silva">
+
+        <label for="horario">HORÁRIO DA ENTREGA:</label>
+        <input type="time" id="horario">
+
+
+        <button id="btnConfirmar" class="btn-programar">CONFIRMAR</button>
+    </main>
+
+    <footer>
+        <img src="static/help-icon.svg" alt="Ajuda" class="help-icon">
+    </footer>
+    
+    <script src="js/script.js"></script>
+
+</body>
+</html>

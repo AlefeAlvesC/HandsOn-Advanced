@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2AIR - Entrega de Medicamentos</title>
+    <link rel="icon" type="image/png" href="static/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+    <header class="header">
+        <img id="home-icon" src="static/home-icon.svg" alt="Home" class="icon">
+        <h1>2AIR</h1>
+        <img id="exit-icon" src="static/exit-icon.svg" alt="Sair" class="icon">
+    </header>
+
+    <div class="subheader">ENTREGA DE MEDICAMENTOS</div>
+
+    
+
+        <main>
+
+            <div class="toggle-bar">
+                <button id="btn-pendentes" class="toggle-btn ativo">Pendentes</button>
+                <button id="btn-concluidas" class="toggle-btn">Concluídas</button>
+            </div>
+
+            <div id="secao-pendentes">
+                <!--<h2>ENTREGAS PENDENTES</h2>-->
+                <div class="container">
+
+                    <table class="entregas-tabela">
+                        <thead>
+                            <tr>
+                                <th>LOCAL</th>
+                                <th>PACIENTE</th>
+                                <th>MEDICAMENTO</th>
+                                <th>HORÁRIO</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tabela-pendentes">
+                            <!-- Dados serão inseridos aqui -->
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            
+            <div id="secao-concluidas" style="display: none;">
+                <!--<h2>ENTREGAS CONCLUIDAS</h2>-->
+                <div class="container">
+
+                    <table class="entregas-tabela">
+                        <thead>
+                            <tr>
+                                <th>LOCAL</th>
+                                <th>PACIENTE</th>
+                                <th>MEDICAMENTO</th>
+                                <th>HORÁRIO</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody id="tabela-entregas">
+                            <!-- Dados serão inseridos aqui -->
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+            <a href="nova-entrega.html">
+                <button class="btn-programar">PROGRAMAR NOVA ENTREGA</button>
+            </a>
+        </main>
+
+        <div id="blockchain-status" style="text-align:center; font-weight:bold; margin: 10px;"></div>
+
+        <footer>
+            <img src="static/help-icon.svg" alt="Ajuda" class="help-icon">
+        </footer>
+
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+    <!-- Seu script -->
+    <script src="js/script.js"></script>
+</body>
+</html>

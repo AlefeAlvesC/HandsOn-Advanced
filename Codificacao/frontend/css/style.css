@@ -1,0 +1,260 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #d6f1b7;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #7ac62b;
+  /*display: flex;*/
+  flex-direction: column;
+  border-radius: 12px;
+}
+
+.header {
+  background-color: #b9e28c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #2c3e50;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.subheader {
+  background-color: #e8f5d6;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.entregas-tabela {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #94d957;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.entregas-tabela thead {
+  background-color: #5fae2f;
+  color: white;
+  text-align: left;
+}
+
+.entregas-tabela th,
+.entregas-tabela td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #73c438;
+  font-size: 14px;
+}
+
+.entregas-tabela tbody tr:hover {
+  background-color: #c9f3a8;
+  cursor: default;
+}
+
+.entregas-tabela th {
+  font-weight: bold;
+}
+
+.entregas-tabela td {
+  color: #2e3d27;
+}
+
+.btn-programar {
+  background: linear-gradient(to right, #017c3f, #98e88a);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-programar:hover {
+  background: linear-gradient(to right, #016c3a, #89d779);
+}
+
+footer {
+  background-color: #e8f5d6;
+  text-align: center;
+  padding: 10px;
+}
+
+.help-icon {
+  width: 40px;
+}
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-container label {
+  color: white;
+  margin: 10px 0 5px;
+  text-align: left;
+  width: 100%;
+  max-width: 300px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.form-container input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  font-size: 1em;
+}
+
+/*Botao que mostras as tabelas*/
+.toggle-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.toggle-bar button{
+  padding: 10px 20px;
+  border: 1px solid #cccccc;/*
+  background-color: #f0f0f0;*/
+  
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-bar button.ativo {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.toggle-bar button:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 0px;
+
+  border-bottom-left-radius: 8px;
+  border-right: 1px;
+}
+
+.toggle-bar button:last-child {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 8px;
+}
+
+
+
+.toggle-btn {
+  /*
+  flex: 1;
+  flex-direction: column;
+  max-width: 500px;*/
+  
+  padding: 10px;
+  background-color: #5fae2f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn:not(:last-child) {
+  border-right: 1px solid #4e8c24;
+}
+
+.toggle-btn.ativo {
+  background-color: #94d957;
+  color: #2c3e50;
+}
+
+
+@media (max-width: 768px) {
+  .entregas-tabela,
+  .entregas-tabela thead,
+  .entregas-tabela tbody,
+  .entregas-tabela th,
+  .entregas-tabela td,
+  .entregas-tabela tr {
+    display: block;
+  }
+
+  .entregas-tabela{
+    width: 100%;
+    overflow:unset;
+    
+  }
+  
+  /*Escondeu a primeira coluna da tabela*/
+  .entregas-tabela thead{
+    display: none;
+  }
+  
+  .entregas-tabela tr {
+    margin-bottom: 15px;
+    background: #e4f9c9;
+    border-radius: 12px;
+    padding: 10px;
+  }
+
+  .entregas-tabela td {
+    padding-left: 50%;
+    position: relative;
+    text-align: left;
+  }
+
+  .entregas-tabela td::before {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    width: 45%;
+    font-weight: bold;
+    color: #4e8c24;
+  }
+
+  .entregas-tabela td:nth-child(1)::before { content: "Sala"; }
+  .entregas-tabela td:nth-child(2)::before { content: "Paciente"; }
+  .entregas-tabela td:nth-child(3)::before { content: "Medicamento"; }
+  .entregas-tabela td:nth-child(4)::before { content: "Horário"; }
+  .entregas-tabela td:nth-child(5)::before { content: "Médico"; }
+  .entregas-tabela td:nth-child(6)::before { content: "Status"; }
+}
